@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "c2c02d45-adfd-4886-a755-e24087071dc8",
+		"name": "mutsaSNS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28055518"
+	},
+	"item": [
+		{
+			"name": "http://localhost:2222/token/issue",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"전지현\",\n    \"password\": \"pure\"\n\n}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:2222/token/issue"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:2222/token/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"빈지노\",\n    \"password\": \"aqua\",\n    \"passwordCheck\": \"aqua\",\n    \"address\": \"서울\",\n    \"email\": \"aqua@gmail.com\",\n    \"phone\": \"010-2333-3333\"\n}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:2222/token/register"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:2222/feed",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiLruYjsp4DrhbgiLCJpYXQiOjE2OTE0NzgzNjUsImV4cCI6MTY5MTQ4MTk2NX0.97P6CPuFexkQ3aWgBSjPBaXkj11SaiJxqjjNVe7EmqqTqUYJ46cO-7H92wki9M1HwY2aMdh5x5VwDkG1LPGbEA"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \n    \"title\": \"배제우 그만 좀 ...\",\n    \"content\": \"잔소리 왜케 심해\"\n \n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:2222/feed"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:2222/token/profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiLruYjsp4DrhbgiLCJpYXQiOjE2OTE0ODQxMzcsImV4cCI6MTY5MTQ4NzczN30.1GNl94yzpTAe_yR4YkN72y2PpuAboiEkjCmHSPmXG8MgMRV_Hn8gsoqFjmQnvPclF-99BdikG1uQ2LUg9T4r4w"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/diana/Downloads/정상수.png"
+						}
+					]
+				},
+				"url": "http://localhost:2222/token/profile"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:2222/feed/2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiLruYjsp4DrhbgiLCJpYXQiOjE2OTE0OTAwNjQsImV4cCI6MTY5MTQ5MzY2NH0._0xjcV1zKeA6SpiYilWil3Zd-phdobCgFnDbcwdDcHDespo8R-GOewNZ8iXxF4FIthA7hkPwW_o2RDZs7TWqqw"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/diana/Downloads/옴팡이.png"
+						}
+					]
+				},
+				"url": "http://localhost:2222/feed/2"
+			},
+			"response": []
+		}
+	]
+}
